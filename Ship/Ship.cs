@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -10,19 +12,28 @@ namespace Ship
     {
         public void start()
         {
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+            IPAddress ipAddress = ipHostInfo.AddressList[0];  
             
-            TcpListener server = new TcpListener(IPAddress.Any, 20000);
-            server.Start();
-//            TcpClient client = server.AcceptTcpClient();
-            Task<TcpClient> c =  server.AcceptTcpClientAsync();
-            TcpClient e = c.Result;
+            List<Socket> acceptedSockets = new List<Socket>();
             
             
-            Console.WriteLine("Connected!");
+            Console.WriteLine("Waiting for a connection...");  
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
+            Socket listener = new Socket(ipAddress.AddressFamily,SocketType.Stream, ProtocolType.Tcp);
+            listener.Bind(localEndPoint);  
+            listener.Listen(100);  
+            Socket handler = listener.Accept();  
+            acceptedSockets.Add(handler);
+            Console.WriteLine(acceptedSockets.Count);
+            Socket.Select(acceptedSockets, null, null, 1000);
+            Console.WriteLine(acceptedSockets.Count);
+            handler.Send(Encoding.ASCII.GetBytes("Hello"));
+//            Console.WriteLine("Echoed text = {0}",  
+//                System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 
-            
-            sendWelcomeBrodcast();
+
+//            sendWelcomeBrodcast();
         }
 
         private void sendWelcomeBrodcast()

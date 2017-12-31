@@ -12,6 +12,7 @@ namespace Ship
         {
             Ship s = new Ship();
             s.start();
+            
         }
 
 //        static int FreeTcpPort()
