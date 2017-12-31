@@ -1,0 +1,6 @@
+C:\Users\Omer\RiderProjects\Ship\Millioner\bin\Debug\Millioner.exe
+C:\Users\Omer\RiderProjects\Ship\Millioner\bin\Debug\Millioner.pdb
+C:\Users\Omer\RiderProjects\Ship\Millioner\obj\Debug\Millioner.csprojResolveAssemblyReference.cache
+C:\Users\Omer\RiderProjects\Ship\Millioner\obj\Debug\Millioner.csproj.CoreCompileInputs.cache
+C:\Users\Omer\RiderProjects\Ship\Millioner\obj\Debug\Millioner.exe
+C:\Users\Omer\RiderProjects\Ship\Millioner\obj\Debug\Millioner.pdb

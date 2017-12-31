@@ -1,0 +1,6 @@
+C:\Users\Omer\RiderProjects\Ship\Ship\bin\Debug\Ship.exe
+C:\Users\Omer\RiderProjects\Ship\Ship\bin\Debug\Ship.pdb
+C:\Users\Omer\RiderProjects\Ship\Ship\obj\Debug\Ship.csprojResolveAssemblyReference.cache
+C:\Users\Omer\RiderProjects\Ship\Ship\obj\Debug\Ship.csproj.CoreCompileInputs.cache
+C:\Users\Omer\RiderProjects\Ship\Ship\obj\Debug\Ship.exe
+C:\Users\Omer\RiderProjects\Ship\Ship\obj\Debug\Ship.pdb
