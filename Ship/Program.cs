@@ -10,11 +10,8 @@ namespace Ship
     {
         public static void Main(string[] args)
         {
-            UdpClient client = new UdpClient();
-            IPEndPoint ip = new IPEndPoint(IPAddress.Broadcast, 5656);
-            byte[] bytes = Encoding.ASCII.GetBytes("Foo");
-            client.Send(bytes, bytes.Length, ip);
-            client.Close();
+            Ship s = new Ship();
+            s.start();
         }
 
 //        static int FreeTcpPort()
